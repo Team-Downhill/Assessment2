@@ -1,0 +1,86 @@
+\section{Assignment}
+This project involves designing and developing a functional BLDC motor controller with a user interface. The system must integrate sensors, a microcontroller, power electronics, and control algorithms to achieve efficient motor operation.
+
+\subsection{Assignment Statement}
+The goal of this project is to develop a BLDC motor controller that can drive a 24V, 78W BLDC motor in a closed-loop configuration using hall sensor feedback. The system must allow user control via a throttle, display real-time data, and be implemented on a custom PCB.
+
+\subsection{Requirement}
+The following requirements must be met.
+
+% \section{Assignment}
+% This project involves designing and developing a functional BLDC motor controller with a user interface. The system must integrate sensors, a microcontroller, power electronics, and control algorithms to achieve efficient motor operation.
+
+\subsubsection{Business Requirements}
+\begin{enumerate}[label=B\arabic*.]
+    \item \textbf{Cost Constraints}: The final design should be developed within a budget of 100 euros (excluding the PCB).
+    \item \textbf{Market Competitiveness}: The motor controller should enhance e-bike efficiency to attract customers willing to pay a premium.
+    \item \textbf{Standardization}: The design should use industry-standard components available from approved suppliers (e.g., Conrad, Farnell).
+    \item \textbf{Sustainability}: The final design should aim for energy efficiency to align with the theme of smart energy.
+\end{enumerate}
+
+\subsubsection{User Requirements}
+\begin{enumerate}[label=U\arabic*.]
+    \item \textbf{Ease of Use}: The user interface should allow intuitive control of motor speed via throttle input.
+    \item \textbf{Performance Display}: The system must provide real-time feedback on motor speed (RPM) and current consumption.
+    \item \textbf{Reliability}: The motor controller must operate continuously and reliably under standard e-bike conditions.
+    \item \textbf{Safety}: The design must prevent hazardous conditions such as shoot-through in the transistors.
+    \item \textbf{Compact and Durable}: The system should be integrated onto a single PCB, suitable for e-bike applications.
+\end{enumerate}
+
+\subsubsection{System Requirements}
+
+\paragraph{Hardware Requirements}
+\begin{enumerate}[label=H\arabic*.]
+    \item \textbf{Motor Compatibility}: The controller must drive a \textbf{24V, 78W sensored BLDC motor} in a closed-loop system.
+    \item \textbf{Microcontroller Selection}: The design must use either:
+    \begin{itemize}
+        \item \textbf{RP2040} (Raspberry Pi Pico) (Recommended)
+        \item \textbf{STM32F103C8T6} (STM Blue Pill) (Alternative)
+    \end{itemize}
+    \item \textbf{Sensor Processing}: The hall sensor signals must be processed by the microcontroller (no advanced motor driver ICs handling hall sensors internally).
+    \item \textbf{Power Electronics}: The system must use discrete transistors for the three-phase motor control.
+    \item \textbf{PCB Integration}: The final circuit must be assembled on a custom PCB designed and produced by the team.
+    \item \textbf{Current Measurement}: The controller must measure and report motor current consumption to the user interface.
+\end{enumerate}
+
+\paragraph{Software Requirements}
+\begin{enumerate}[label=S\arabic*.]
+    \item \textbf{Motor Control Algorithms}: The software must generate correct PWM signals to control motor speed and direction.
+    \item \textbf{Dead-Time Implementation}: Software must ensure proper dead-time in PWM signals to prevent shoot-through.
+    \item \textbf{User Input Handling}: The microcontroller must read throttle input and adjust motor speed accordingly.
+    \item \textbf{Real-Time Data Processing}: The system must process hall sensor feedback to maintain accurate motor speed control.
+    \item \textbf{System Initialization}: Define reset states for all IOs upon startup.
+    \item \textbf{Fault Handling}: The software should detect and handle motor faults, such as overcurrent or sensor failures.
+    \item \textbf{Modular and Maintainable Code}: The software must be structured, well-documented, and logically organized.
+\end{enumerate}
+
+\subsection{Project Boundaries}
+The project includes:
+\begin{itemize}
+    \item Development of motor control software and firmware.
+    \item Design and implementation of a PCB for the motor controller.
+    \item Testing and validation of the system to ensure proper operation.
+    \item Preparation of technical documentation and reports.
+\end{itemize}
+The project does not include:
+\begin{itemize}
+    \item Mass production or commercial deployment of the controller.
+    \item Advanced features such as regenerative braking or wireless communication.
+\end{itemize}
+
+\subsection{Deliverables}
+At the end of the project, the following must be completed:
+\begin{itemize}
+    \item Fully functional BLDC motor controller with user interface.
+    \item Custom PCB with assembled components.
+    \item Well-documented microcontroller code.
+    \item Final report detailing the design, testing, and outcomes.
+    \item Presentation and live demonstration of the final system.
+\end{itemize}
+
+
+\subsection{The Problem}
+Op den Bergh Fietsen (ODB) has been selling low quality and inefficient electric bicycles, which used brushed DC motors. 
+
+
+

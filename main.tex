@@ -1,14 +1,41 @@
-\documentclass{article}
-\usepackage{graphicx} % Required for inserting images
+\documentclass[11pt,english]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{hyperref}
+\usepackage{blindtext}
+\usepackage{geometry}
+\usepackage{comment}
+\usepackage{enumitem}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
 
-\title{project tommy}
-\author{Laurens van der Drift}
-\date{March 2025}
+\definecolor{Grey1}{HTML}{343434}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+\graphicspath{ {./IMG/} }
+
+
 
 \begin{document}
-
+\include{main/front}
 \maketitle
-
-\section{Introduction}
-
+\include{main/inhouds}
+\include{chapters/01_Intro&Background}
+\include{chapters/02_Assignment}
+\include{chapters/03_Organisation}
+\include{chapters/04_Quality&Risks}
 \end{document}
